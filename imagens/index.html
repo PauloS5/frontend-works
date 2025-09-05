@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imagens</title>
+    </head>
+    <style>
+        img {
+            margin: 100px;
+            width: 200px;
+            height: auto;
+            transition-duration: 800ms;
+            cursor: pointer;;
+        }
+        img:hover {
+            transform: rotate(45deg);
+            width: 400px;
+            margin: 0px;
+        }
+    </style>
+    <body>
+        <img onclick="alert('Você clicou em exemplo!')" src="exemplo.png" alt="Foto de exemplo">
+        <figcaption>
+            Uma simples foto com o texto "exemplo"
+        </figcaption>
+    </body>
+</html>

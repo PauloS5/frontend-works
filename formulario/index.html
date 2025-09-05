@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Formulário</legend>
+            <form action="" method="">
+                <label for="in-name">Nome:</label>
+                <input type="text" id="in-name" name="in-name" placeholder="Seu nome" required>
+                <br>
+                <label for="in-surname">Sobrenome:</label>
+                <input type="text" id="in-surname" name="in-surname" placeholder="Seu sobrenome">
+                <br>
+
+                <input onclick="alert('Fomulário limpo!')" type="reset" value="Limpar">
+                <input onclick="hello()" type="submit" value="Enviar">
+            </form>
+        </fieldset>
+    </body>
+    <script>
+        function hello() {
+            let name = document.getElementById('in-name').value
+            let surname = document.getElementById('in-surname').value
+            let phrase = 'Olá, ' + name + (surname != "" ? " " : "") + surname + '!'
+            alert(phrase)
+        }
+    </script>
+</html>

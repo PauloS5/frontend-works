@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabela</title>
+    </head>
+    <body onload="generateData()">
+        <table id="t-products" border>
+            <thead>
+                <tr>
+                    <th colspan="3">Uma simples Tabela</th>
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><small>Um simples Rodapé</small></td>
+                </tr>
+            </tfoot>
+        </table>
+        <caption>Temos uma simples tabelas com alguns itens</caption>
+        <br><br>
+
+        <label for="row">Linha:</label>
+        <input id="row" type="number" min="1" max="3" id="in-row" value="1">
+        <br>
+        <label for="col">Coluna:</label>
+        <input id="col" type="number" min="1" max="3" id="in-col" value="1">
+    </body>
+    <script>
+        function generateData() {
+            let data = [
+                ["Item 1", "R$ 20,00", "10"],
+                ["Item 2", "R$ 30,00", "15"],
+                ["Item 3", "R$ 40,00", "20"]
+            ]
+            let body = document.getElementById("table-body")
+
+            for (let i = 0; i < body.childNodes.length; i++) {
+                const row = body.childNodes[i];
+
+                for (let j = 0; j < row.childNodes.length; j++) {
+                    const el = row.childNodes[j];
+
+                    el.innerHTML = data[i % 3][j % 3]
+                    el.style = `color: hsl(calc(${i * 120}), 100%, 50%);`
+                }
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementos Genéricos</title>
+    </head>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        .h1 {
+            color: red;
+            text-align: center;
+        }
+        .h2 {
+            color: rgb(0, 255, 0);
+        }
+        .text {
+            color: rgb(244, 255, 35);
+        }
+        .container {
+            margin: 20px;
+            padding: 5px;
+        }
+        .bg-gray {
+            background-color: rgb(22, 22, 22);
+            border: 0;
+            border-radius: 10px;
+        }
+        .text-bold {
+            font-weight: bold;
+        }
+    </style>
+    <body>
+        <h1 class="h1">Elementos Genéricos</h1>
+
+        <div class="container bg-gray">
+            <h2 class="h2">Exemplo</h2>
+            <p class="text">Dentro do elemento DIV</p>
+        </div>
+        <p class="container bg-gray text">
+            Parágrafo fora do elemento DIV que contém um elemento <span class="text-bold">SPAM</span>
+        </p>
+    </body>
+</html>

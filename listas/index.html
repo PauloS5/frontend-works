@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Listas</title>
+    </head>
+    <style>
+        h4 {
+            color: red;
+            font-size: large;
+            margin: 3px;
+            transition-duration: 500ms;
+            cursor: pointer;
+        }
+        h4:hover {
+            font-size: larger;
+            text-decoration: underline;
+        }
+        .invisible {
+            display: none;
+        }
+    </style>
+    <body>
+        <h4 id="btn1">Lista não ordenada:</h4>
+        <ul id="list1" class="invisible">
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+
+        <h4 id="btn2">Lista ordenada:</h4>
+        <ol id="list2" class="invisible">
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ol>
+    </body>
+    <script>
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let list1 = document.getElementById("list1")
+        let list2 = document.getElementById("list2")
+
+        btn1.addEventListener("click", ()=>{
+            list1.classList.toggle("invisible")
+        })
+        btn2.addEventListener("click", ()=>{
+            list2.classList.toggle("invisible")
+        })
+    </script>
+</html>

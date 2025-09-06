@@ -1,0 +1,21 @@
+* {
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+}
+p {
+    font-size: 20px;
+}
+
+h2 a {
+    color: seagreen;
+}
+
+.premieres-today {
+    color: darkred;
+}
+.premieres-tomorrow {
+    color: darkblue;
+}

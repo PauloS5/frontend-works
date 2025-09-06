@@ -1,11 +1,89 @@
+/* GERAL */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* SELETOR: TAG */
 ul {
     margin-top: 0px;
 }
-h1, h2 {
-    color: red;
+fieldset {
+    background-color: rgba(146, 215, 255, 50);
+    border-color: rgb(48, 177, 251);
+    border-radius: 10px;
+    width: 400px;
+}
+div {
+    display: inline-block;
+    padding-inline: 10px;
+    border-radius: 10px;
+    margin: 8px;
+    width: fit-content;
 }
 
+/* HERANÇA */
+legend h2 {
+    margin: 0px;
+}
+h1, h2 {
+    color: rgb(0, 111, 175);
+}
 div h2 {
-    color: blue;
+    color: #990099;
     margin-bottom: 0px;
+}
+
+/* SELETOR: ID */
+#doces {
+    background-color: rgb(75, 255, 255);
+}
+#salgados {
+    background-color: rgb(255, 255, 75);
+}
+#aviso {
+    position: fixed;
+    bottom: 0;
+
+    text-align: center;
+    margin-bottom: 70px;
+    width: 100%;
+
+    animation-duration: 1s;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* SELETOR /: CLASS */
+.title {
+    margin-top: 8px;
+    transition-duration: 500ms;
+}
+.title:hover {
+    transform: translateY(-5px);
+}
+.item-doce {
+    font-weight: bold;
+}
+.item-salgado {
+    font-weight: bolder;
+}
+.item-doce, .item-salgado {
+    cursor: pointer;
+    transition-duration: 600ms;
+}
+.item-doce:hover, .item-salgado:hover {
+    transform: translateX(5px) translateY(-5px);
+}
+
+/* Animações **/
+@keyframes pulse {
+    from {
+        font-size: small;
+        color: #0000ff;
+    }
+    to {
+        font-size: medium;
+        color: #ff0000;
+    } 
 }
